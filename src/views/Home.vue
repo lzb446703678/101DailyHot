@@ -10,6 +10,7 @@
       :y-gap="24"
     >
       <n-grid-item
+        
         class="news-card"
         v-for="(item, index) in store.newsArr.filter((item) => item.show)"
         :key="item"
@@ -34,6 +35,11 @@ import { mainStore } from "@/store";
 import HotList from "@/components/HotList.vue";
 
 const store = mainStore();
+
+// 通过 computed 属性过滤掉那些 loadingError 为 true 的新闻项
+const visibleNewsItems = computed(() => {
+  return store.newsArr.filter(item => item.show && !item.loadingError);
+});
 
 // 重置
 const reset = () => {

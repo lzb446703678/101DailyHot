@@ -51,12 +51,6 @@ export const mainStore = defineStore("mainData", {
           show: true,
         },
         {
-          label: "IT之家",
-          name: "ithome",
-          order: 7,
-          show: true,
-        },
-        {
           label: "澎湃新闻",
           name: "thepaper",
           order: 8,
@@ -74,36 +68,15 @@ export const mainStore = defineStore("mainData", {
           order: 10,
           show: true,
         },
-        {
-          label: "稀土掘金",
-          name: "juejin",
-          order: 11,
-          show: true,
-        },
+
         {
           label: "腾讯新闻",
           name: "newsqq",
           order: 12,
           show: true,
         },
-        {
-          label: "豆瓣",
-          name: "douban_new",
-          order: 13,
-          show: true,
-        },
-        {
-          label: "原神",
-          name: "genshin",
-          order: 14,
-          show: true,
-        },
-        {
-          label: "LOL",
-          name: "lol",
-          order: 15,
-          show: true,
-        },
+
+
         {
           label: "快手",
           name: "kuaishou",
@@ -128,32 +101,7 @@ export const mainStore = defineStore("mainData", {
           order: 19,
           show: true,
         },
-        {
-          label: "网易云音乐",
-          name: "netease_music_toplist",
-          params: { type: 1 },
-          order: 20,
-          show: true,
-        },
-        {
-          label: "QQ音乐热歌榜",
-          name: "qq_music_toplist",
-          params: { type: 1 },
-          order: 21,
-          show: true,
-        },
-        {
-          label: "NGA",
-          name: "ngabbs",
-          order: 22,
-          show: true,
-        },
-        {
-          label: "V2EX",
-          name: "v2ex",
-          order: 23,
-          show: true,
-        },
+
       ],
       newsArr: [],
       // 链接跳转方式

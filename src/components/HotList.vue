@@ -1,5 +1,6 @@
 <template>
   <n-card
+    
     hoverable
     class="hot-list"
     :header-style="{ padding: '16px' }"
@@ -164,6 +165,11 @@ const hotListData = ref(null);
 const scrollbarRef = ref(null);
 const listLoading = ref(false);
 const loadingError = ref(false);
+
+// 触发一个自定义事件，告知父组件当前的 loadingError 状态
+watch(loadingError, (newValue) => {
+  emit('update:error', newValue);
+});
 
 // 获取热榜数据
 const getHotListsData = async (name, isNew = false) => {
