@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer class="footer"> <!-- 应用居中样式 -->
     <div class="copyright">
       <n-text class="description" v-html="packageJson.description" />
       <n-text
@@ -8,6 +8,13 @@
         v-html="packageJson.author"
         @click="jumpLink(packageJson.github)"
       />
+      <!-- 新增的段落 -->
+      <n-text class="additional-info" :depth="3">
+         基于原作者
+         <a href="https://github.com/imsyy" target="_blank">imsyy</a>
+         的开源项目进行创作，遵循
+         <a href="https://opensource.org/licenses/MIT" target="_blank">MIT许可协议</a>。
+      </n-text>
     </div>
     <n-text
       v-if="icp"
@@ -18,6 +25,8 @@
     />
   </footer>
 </template>
+
+
 
 <script setup>
 import packageJson from "@/../package.json";
@@ -42,6 +51,7 @@ footer {
   justify-content: center;
   .copyright {
     margin-bottom: 4px;
+    text-align: center;
     .description {
       &::after {
         content: "@ Copyright By";
@@ -64,5 +74,8 @@ footer {
       color: var(--n-code-text-color);
     }
   }
+  .additional-info {
+  display: block; /* 使内容独占一行并可以应用居中对齐 */
+}
 }
 </style>
