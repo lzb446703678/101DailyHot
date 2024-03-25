@@ -10,9 +10,9 @@
       />
       <!-- 新增的段落 -->
       <n-text class="additional-info" :depth="3">
-         基于原作者
+         基于
          <a href="https://github.com/imsyy" target="_blank">imsyy</a>
-         的开源项目进行创作，遵循
+         的开源项目并遵循
          <a href="https://opensource.org/licenses/MIT" target="_blank">MIT许可协议</a>。
       </n-text>
     </div>
